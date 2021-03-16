@@ -226,7 +226,7 @@ input, select, textarea {
 		transform: translate3d(0,0,0);
 	/* Set your background with this */
 
-		background: #292a2bd5 url("images/bg.jpg") bottom left;
+		background: #000000 url("images/bg.jpg") bottom left;
 		background-repeat: repeat-x;
 		height: 100%;
 		left: 0;
@@ -300,8 +300,8 @@ input, select, textarea {
 	}
 
 	#bg {
-		background-size: auto;
-		width: auto;
+		background-size: 2250px auto;
+		width: 6750px;
 	}
 
 /* Overlay */
@@ -972,8 +972,8 @@ input, select, textarea {
 		}
 
 		#bg {
-			background-size: 300px auto;
-			width: 900px;
+			background-size: auto;
+			width: auto;
 		}
 
 	/* Header */
