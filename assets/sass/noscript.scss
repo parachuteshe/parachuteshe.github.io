@@ -3,28 +3,24 @@
 @import 'libs/mixins';
 @import 'libs/vendor';
 @import 'libs/breakpoints';
-@import 'libs/html-grid';
 
 /*
-	Helios by HTML5 UP
+	Ethereal by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-/* Carousel */
+/* Page */
 
-	.carousel {
-		overflow-x: auto;
+	body {
+		overflow-x: scroll;
 	}
 
-/* Header */
+/* Wrapper */
 
-	body.homepage {
-		&.is-preload {
-			#header {
-				&:after {
-					opacity: 0;
-				}
-			}
+	#wrapper {
+		body.is-preload & {
+			@include vendor('transform', 'none');
+			opacity: 1;
 		}
 	}
