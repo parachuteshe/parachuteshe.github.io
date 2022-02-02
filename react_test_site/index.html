@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Add React in One Minute</title>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
+    <script src="https://unpkg.com/antd@3.19.3/dist/antd.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/antd/3.19.0/antd.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E1HRV5P5R9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-E1HRV5P5R9');
+    </script>
+  </head>
+  <body>
+    <div id="demo-app"></div>
+    <h2>Add React in One Minute+Ant Design</h2>
+    <p>This page demonstrates using React with no build tooling.</p>
+    <p>React is loaded as a script tag.</p>
+
+    <!-- We will put our React component inside this div. -->
+    <div id="like_button_container"></div>
+
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+    <!-- Load our React component. -->
+    <script src="like_button.js"></script>
+    <script type="text/babel">
+      ReactDOM.render(
+          <div>
+            <p>demo</p>
+            <antd.Button type="primary">Primary</antd.Button>
+            <antd.Button>Default</antd.Button>
+            <antd.Button type="dashed">Dashed</antd.Button>
+            <antd.Button type="danger">Danger</antd.Button>
+            <antd.Button type="link">Link</antd.Button>
+          </div>,
+          document.getElementById("demo-app")
+      );
+      </script>
+
+  </body>
+</html>
+
+<!DOCTYPE html>
