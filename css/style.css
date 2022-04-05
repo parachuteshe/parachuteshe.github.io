@@ -26,22 +26,26 @@ a{
   text-align: center;
 }
 
-#slash, #videos{
+#slash{
+  padding:0 auto 0 auto;
+  margin:0 auto 0 auto;
+}
+ #intro,#projects, #articles, #design, #videos, #contacts{
+  padding:5% auto 0 auto;
   text-align: center;
+  border:none;
 }
 
-#slash-row1{
+.slash-card-head{
   text-align: center;
   margin:5% -2%;
   color:#0E38B1;
 }
 
-#slash-row2{
-  text-align: left;
-}
-
 .card{
   text-align: center;
+  pading:3% auto 3% auto;
+  margin:3% auto 0 auto;
 }
 
 .col-sm-6,.col{
@@ -53,7 +57,13 @@ video{
   width:100%;
 }
 
-#contacts{
-  padding:20px;
+.project-img{
+  width:100%;
   text-align: center;
+  /* position:relative;
+  z-index: 0; */
+}
+
+.carousel-indicators{
+  margin:13% 0 0 0;
 }
