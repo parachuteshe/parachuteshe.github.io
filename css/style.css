@@ -1,7 +1,15 @@
+body {
+    position: relative;
+  }
+
 
 img {
   width: 400px;
   margin: 0 auto;
+}
+
+.nav-link{
+  color:grey;
 }
 
 a{
@@ -41,8 +49,9 @@ a{
   margin:5% -2%;
   color:#0E38B1;
 }
-.slash-card{
+.card.slash-card{
   height:280px;
+  border:0px;
 }
 .card{
   text-align: center;
