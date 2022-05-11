@@ -104,3 +104,32 @@ video{
     height:auto;
   }
 }
+
+.card,#projects
+{
+	position:relative;
+	animation:mymove 2s;
+	animation-iteration-count:1;
+	animation-fill-mode:forwards;
+
+	/* Safari 和 Chrome */
+	-webkit-animation:mymove 2s;
+	-webkit-animation-iteration-count:1;
+	-webkit-animation-fill-mode:forwards;
+}
+
+@keyframes mymove
+{
+	from {top:0px;}
+	to {top:-30px;}
+}
+
+@-webkit-keyframes mymove /* Safari 和 Chrome */
+{
+	from {top:0px;}
+	to {top:-30px;}
+}
+
+.carousel-caption.new {
+    bottom: 0;
+}
