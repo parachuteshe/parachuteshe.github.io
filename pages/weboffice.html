@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebOffice</title>
   </head>
-  <script src="./web-office-sdk-solution.umd.js"></script>
+  <script src="web-office-sdk-solution-v2.0.6/web-office-sdk-solution.umd.js"></script>
   <body>
     <script type="text/babel">
       window.onload = function () {
         const jssdk = WebOfficeSDK.init({
           officeType: WebOfficeSDK.OfficeType.Writer,
           appId: 'SX20240826INPMIL',
-          fileId: 'fileIdtest'
+          fileId: 'fileIdtest',
+          mode: 'simple'
         })
         const test = async () => {
           await jssdk.ready()
