@@ -2,19 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"
-    />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebOffice</title>
   </head>
+  <script src="./web-office-sdk-solution.umd.js"></script>
   <body>
-    <script src="web-office-sdk-solution-v2.0.6/web-office-sdk-solution-v2.0.6.umd.js"></script>
-    <script>
-      console.log('引入后可以开始使用 jssdk 了！')
-      console.log(WebOfficeSDK)
+    <script type="text/babel">
+      window.onload = function () {
+        const jssdk = WebOfficeSDK.init({
+          officeType: WebOfficeSDK.OfficeType.Writer,
+          appId: 'SX20240826INPMIL',
+          fileId: 'fileIdtest'
+        })
+        const test = async () => {
+          await jssdk.ready()
+          console.log('api ready')
+        }
+        jssdk.on('fileOpen', function (data) {
+          test()
+          console.log('打开成功')
+        })
+      }
     </script>
-  <h1>Weboffice Test</h1>
   </body>
 </html>
