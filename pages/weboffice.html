@@ -25,6 +25,37 @@
         })
       }
     </script>
+    <script defer>
+      (function() {
+        const initBall = function() {
+          const ball = document.createElement('div');
+          const img = document.createElement('img');
+          const iframe = document.createElement('iframe');
+          
+          img.src = 'https://qn.cache.wpscdn.cn/kg_qa_app_web/test/aidocs/console/logo-ai.png';
+          img.style.cssText = 'width:80%;height:80%';
+          ball.appendChild(img);
+    
+          ball.style.cssText = 'position:fixed;bottom:60px;right:40px;width:48px;height:48px;border-radius:50%;background:#fff;box-shadow:0 2px 12px rgba(56,56,56,.2);cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:9999;overflow:hidden';
+          
+          iframe.style.cssText = 'position:fixed;bottom:120px;right:40px;width:360px;height:680px;border-radius:8px;box-shadow:0 2px 12px rgba(56,56,56,.2);background:#fff;z-index:9998;display:none;border:none';
+          iframe.src = 'https://365.kdocs.cn/wiki/insight/release?link_id=&channel=${}';
+    
+          ball.onclick = function() {
+            iframe.style.display = iframe.style.display === 'none' ? 'block' : 'none';
+          };
+          
+          document.body.appendChild(ball);
+          document.body.appendChild(iframe);
+        };
+    
+        if (document.body) {
+          initBall();
+        } else {
+          document.addEventListener('DOMContentLoaded', initBall);
+        }
+      })();
+    </script>
     
     <h1>AI Docs内嵌测试</h1>
   </body>
