@@ -1,403 +1,246 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  <meta name="description" content="sherise's personal website">
-  <meta name="keywords" content="sherise, web developing, html, css, javascript">
-  <meta name="author" content="sherise she">
-  <title> Sherise She </title>
-  <link rel="icon" href="images/favicon.ico">
-  <!-- 用于苹果发送屏幕的小图标 -->
-  <link rel="apple-touch-icon" sizes="114x114" href="images/background.png" />
-  <!-- 本地的CSS文件 -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <!-- 图标cdn -->
-  <script src="https://kit.fontawesome.com/0e706972e1.js" crossorigin="anonymous"></script>
-  <!-- bootstrap -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <!-- google fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap" rel="stylesheet">
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-56J46QW6WY"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-56J46QW6WY');
-  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="磐序 Pash — 专注数字化解决方案、技术架构与流程咨询" />
+  <meta name="keywords" content="磐序,Pash,数字化,技术架构,流程咨询,Sherise" />
+  <meta name="author" content="Sherise She / 磐序 Pash" />
+  <title>磐序｜Pash — 数字化解决方案与技术架构咨询</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
+<body>
+  <div class="noise"></div>
+  <div class="grid-bg" aria-hidden="true"></div>
 
-<body data-spy="scroll" data-target="#navbar-top" data-offset="20">
-  <div class="container-fluid">
-    <!-- 导航栏 -->
-    <nav id="navbar-top" class="navbar fixed-top navbar-expand-lg navbar-light bg-navbar">
-      <a class="navbar-brand" href="#">Sherise</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="nav nav-pills mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#slash">Slash</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#projects">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#articles">Articles</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#design">Design</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#videos">Videos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contacts">Contacts</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pages/weboffice.html">Weboffice</a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
-        </form>
+  <nav class="nav glass">
+    <a href="#" class="nav-brand">
+      <span class="brand-icon">Pash</span>
+      <span class="brand-text">磐序</span>
+    </a>
+    <button type="button" class="nav-toggle" aria-label="菜单">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="#hero">首页</a></li>
+      <li><a href="#about">品牌</a></li>
+      <li><a href="#slash">经历</a></li>
+      <li><a href="#services">服务</a></li>
+      <li><a href="#projects">项目</a></li>
+      <li><a href="#articles">内容</a></li>
+      <li><a href="#design">设计</a></li>
+      <li><a href="#contact">联系</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="hero-bg">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
       </div>
-    </nav>
-    <!-- 插画和intro -->
-    <div class="container-fluid" id="intro">
-      <div class="row">
-        <div class="col-sm">
-          <div class="image">
-            <img src="images/background.png" alt="background">
-          </div>
-        </div>
-        <div class="col-sm">
-          <div class="intro">
-            <h1>Hi, I'm Sherise</h1>
-            <p>a tech-consultant</p>
-          </div>
+      <div class="hero-content">
+        <p class="hero-label"><span class="mono">// SHERISE SHE</span></p>
+        <h1 class="hero-title">
+          <span class="title-cn">磐序</span>
+          <span class="title-divider">｜</span>
+          <span class="title-en">Pash</span>
+        </h1>
+        <p class="hero-tagline">专注数字化解决方案、技术架构与流程咨询<br />用底层逻辑打造高效、有序、可落地的数字服务</p>
+        <div class="hero-cta">
+          <a href="#services" class="btn btn-primary">了解服务</a>
+          <a href="#contact" class="btn btn-ghost">联系我</a>
         </div>
       </div>
-    </div>
+      <div class="scroll-hint">
+        <span class="mono">SCROLL</span>
+        <span class="scroll-line"></span>
+      </div>
+    </section>
 
-    <!-- Slash -->
-    <div id="slash" class="container-fluid">
-      <div class="row">
-
-        <div class="col-sm-2">
-
-          <div class="card slash-card">
-            <div class="card-head">
-              <div class="slash-card-head">
-                <i class="fa-solid fa-briefcase fa-4x"></i>
-              </div>
-            </div>
-
-            <div class="card-body">
-              <p>EY consulting</p>
-              <p>P&G</p>
-              <p>Mobvista</p>
-            </div>
-          </div>
-
-        </div>
-
-
-        <div class="col-sm-3">
-
-          <div class="card slash-card">
-            <div class="card-head">
-              <div class="slash-card-head">
-                <i class="fa-solid fa-person fa-4x"></i>
-              </div>
-            </div>
-
-            <div class="card-body">
-              <p>Tech Consultant</p>
-              <p>Product Designer</p>
-              <p>Ongoing Programmer<p>
-            </div>
-          </div>
-
-        </div>
-
-
-        <div class="col-sm-2">
-
-          <div class="card slash-card">
-            <div class="card-head">
-              <div class="slash-card-head">
-                <i class="fa-solid fa-award fa-4x"></i>
-              </div>
-            </div>
-
-            <div class="card-body">
-              <p>PMP,CSM</p>
-              <p>TCA</p>
-              <p>ITIL</p>
-              <p><a href="pages/certification.html">More</a></p>
-            </div>
-          </div>
-
-
-        </div>
-
-
-        <div class="col-sm-3">
-
-          <div class="card slash-card">
-            <div class="card-head">
-              <div class="slash-card-head">
-                <i class="fa-solid fa-handshake-angle fa-4x"></i>
-              </div>
-            </div>
-
-            <div class="card-body">
-              <p>Substrate Evangelist</p>
-              <p>Startup Grind</p>
-              <p>Google Developer Group</p>
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <div class="col-sm-2">
-
-          <div class="card slash-card">
-            <div class="card-head">
-              <div class="slash-card-head">
-                <i class="fa-solid fa-face-kiss-wink-heart fa-4x"></i>
-              </div>
-            </div>
-
-            <div class="card-body">
-              <p>Violin</p>
-              <p>Photography</p>
-              <p>Vlog</p>
-            </div>
-
-          </div>
-
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title"><span class="mono">[01]</span> 品牌定位</h2>
+        <div class="about-card glass">
+          <p class="about-lead">磐序（Pash）</p>
+          <p class="about-desc">专注<strong>数字化解决方案</strong>、<strong>技术架构</strong>与<strong>流程咨询</strong>，用底层逻辑打造高效、有序、可落地的数字服务。从战略到落地，从系统到流程，让数字为业务赋能。</p>
         </div>
       </div>
-    </div>
-    <!-- Projects -->
-    <div class="container-fluid" id="projects">
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+    </section>
 
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="project-img" src="images/Data Analytics.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption new">
-              <a href="https://github.com/parachuteshe/geo-data-analysis-2019" target="_blank" style="color:white">
-                Data Analytics & Visualization
-              </a>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img class="project-img" src="images/Data Analytics.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption new">
-              <a href="https://github.com/" target="_blank" style="color:white">
-                Web App
-              </a>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img class="project-img" src="images/Data Analytics.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption new">
-              <a href="https://github.com/" target="_blank" style="color:white">
-                Mini Program
-              </a>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img class="project-img" src="images/Data Analytics.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption new">
-              <a href="https://github.com/" target="_blank" style="color:white">
-                RPA Application
-              </a>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img class="project-img" src="images/Data Analytics.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption new">
-              <a href="https://github.com/" target="_blank" style="color:white">
-                DApps
-              </a>
-            </div>
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-    </div>
-    <!-- Articles -->
-    <div class="container-fluid" id="articles">
-
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Case Hub</h5>
-              <p class="card-text">This is a article repository about consulting, case study and work.</p>
-              <a href="https://www.yuque.com/sherise/casehub" target="_blank" class="btn btn-primary">More</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Motion Bank</h5>
-              <p class="card-text">Articles about BP debate, motion bank, debate scripts and analysis.</p>
-              <a href="https://www.yuque.com/sherise/motionbank" target="_blank" class="btn btn-primary">More</a>
-            </div>
-          </div>
+    <section id="slash" class="section section-dark">
+      <div class="container">
+        <h2 class="section-title"><span class="mono">[02]</span> 斜杠经历</h2>
+        <p class="section-sub">Tech Consultant · Product Designer · Ongoing Programmer</p>
+        <div class="slash-grid">
+          <article class="slash-card glass">
+            <div class="slash-icon"><i class="fa-solid fa-briefcase"></i></div>
+            <h3>职业履历</h3>
+            <ul>
+              <li>Kingsoft（AI Solution Architect Senior Manager）</li>
+              <li>EY Consulting</li>
+              <li>P&G</li>
+              <li>Mobvista</li>
+            </ul>
+          </article>
+          <article class="slash-card glass">
+            <div class="slash-icon"><i class="fa-solid fa-award"></i></div>
+            <h3>认证</h3>
+            <ul>
+              <li>PMP · CSM</li>
+              <li>TCA</li>
+              <li>ITIL</li>
+              <li><a href="https://www.credly.com/users/sherise-she.49aa38ed/badges" target="_blank" rel="noopener">Credly 更多</a></li>
+            </ul>
+          </article>
+          <article class="slash-card glass">
+            <div class="slash-icon"><i class="fa-solid fa-handshake-angle"></i></div>
+            <h3>社区</h3>
+            <ul>
+              <li>Substrate Evangelist</li>
+              <li>Startup Grind</li>
+              <li>Google Developer Group</li>
+            </ul>
+          </article>
+          <article class="slash-card glass">
+            <div class="slash-icon"><i class="fa-solid fa-heart"></i></div>
+            <h3>生活</h3>
+            <ul>
+              <li>Violin</li>
+              <li>Photography</li>
+              <li>Vlog</li>
+            </ul>
+          </article>
         </div>
       </div>
+    </section>
 
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Tech Fad</h5>
-              <p class="card-text">Articles about applications and trends of emerging technologies.</p>
-              <a href="https://www.yuque.com/sherise/tech-fad" target="_blank" class="btn btn-primary">More</a>
-            </div>
+    <section id="services" class="section">
+      <div class="container">
+        <h2 class="section-title"><span class="mono">[03]</span> 服务能力</h2>
+        <div class="services-grid">
+          <div class="service-item glass">
+            <span class="service-num mono">01</span>
+            <h3>数字化解决方案</h3>
+            <p>从业务诊断到方案设计，数据驱动、可落地的数字化升级路径。</p>
           </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Thoughts of Reading</h5>
-              <p class="card-text">Articles about books, movies and music. Not just a piece of note.</p>
-              <a href="https://www.yuque.com/sherise/notes" target="_blank" class="btn btn-primary">More</a>
-            </div>
+          <div class="service-item glass">
+            <span class="service-num mono">02</span>
+            <h3>技术架构咨询</h3>
+            <p>系统架构、技术选型与演进规划，支撑业务规模化与稳定性。</p>
           </div>
-        </div>
-      </div>
-    </div>
-    <!-- Design -->
-    <section id="design-sec">
-      <div class="container-fluid" id="design">
-        <div class="row">
-          <div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="card">
-              <img src="images/Product Design.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <p class="card-text" title="Designed by Axure">Product Design</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="card">
-              <img src="images/Product Design.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <p class="card-text" title="Designed by Figma / Sketch / XD">UX Design</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="card">
-              <img src="images/Product Design.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <p class="card-text" title="Designed by Figma / Sketch / XD">Web Design</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="card">
-              <img src="images/Deck Design.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <p class="card-text" title="Designed by Powerpoint">Deck Design</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="card">
-              <img src="images/3D Design.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <p class="card-text" title="Designed by C4D / Blender / Rhino">3D Design</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="card">
-              <img src="images/Graphic Design.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <p class="card-text" title="Designed by PS / AI">Graphic Design</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="card">
-              <img src="images/Photography.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <p class="card-text" title="With Adobe LightRoom">Photography</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="card">
-              <img src="images/3D Design.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <p class="card-text" title="Designed by AE">Motion Design</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="card">
-              <img src="images/Interaction Design.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <p class="card-text" title="Designed by Arduino / Processing">Interaction Design</p>
-              </div>
-            </div>
+          <div class="service-item glass">
+            <span class="service-num mono">03</span>
+            <h3>流程咨询</h3>
+            <p>流程梳理、优化与自动化（RPA），提升效率与可控性。</p>
           </div>
         </div>
       </div>
     </section>
-    <!-- Videos -->
-    <div class="container-fluid" id="videos">
-      <!-- This div is  intentionally blank. It creates the transparent black overlay over the video which you can modify in the CSS -->
-      <div class="overlay"></div>
-      <!-- The HTML5 video element that will create the background video on the header -->
-      <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-        <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
-      </video>
-    </div>
-    <!-- Contacts -->
-    <div class="container-fluid" id="contacts">
-      <p>Feel free to contact me with:</p>
-      <a href="https://www.linkedin.cn/incareer/in/ningyushe/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-      <a href="https://www.behance.net/parashe" target="_blank"><i class="fa-brands fa-behance"></i></a>
-      <a href="http://mp.weixin.qq.com/mp/homepage?__biz=MzIxMjYwOTM1MA==&hid=2&sn=f12d7b7f796595bab0d87c2db59be86f&scene=18#wechat_redirect" target="_blank"><i class="fa-brands fa-weixin"></i></a>
-      <a href="https://github.com/parachuteshe" target="_blank"><i class="fa-brands fa-github"></i></a>
-      <a href="https://www.yuque.com/sherise" target="_blank"><i class="fa-solid fa-dove"></i></a>
-    </div>
 
+    <section id="projects" class="section section-dark">
+      <div class="container">
+        <h2 class="section-title"><span class="mono">[04]</span> 项目与作品</h2>
+        <div class="projects-grid">
+          <a href="https://github.com/parachuteshe/geo-data-analysis-2019" target="_blank" rel="noopener" class="project-card glass">
+            <img src="images/Data Analytics.jpg" alt="Data Analytics &amp; Visualization" class="project-card-img" />
+            <span class="project-tag">Data</span>
+            <h3>Data Analytics &amp; Visualization</h3>
+            <p>地理与数据分析、可视化</p>
+          </a>
+          <a href="https://github.com/parachuteshe" target="_blank" rel="noopener" class="project-card glass">
+            <img src="images/Product Design.jpg" alt="Web App" class="project-card-img" />
+            <span class="project-tag">Web</span>
+            <h3>Web App</h3>
+            <p>Web 应用开发</p>
+          </a>
+          <a href="https://github.com/parachuteshe" target="_blank" rel="noopener" class="project-card glass">
+            <img src="images/Product Design.jpg" alt="Mini Program" class="project-card-img" />
+            <span class="project-tag">Mini</span>
+            <h3>Mini Program</h3>
+            <p>小程序</p>
+          </a>
+          <a href="https://github.com/parachuteshe" target="_blank" rel="noopener" class="project-card glass">
+            <img src="images/Data Analytics.jpg" alt="RPA Application" class="project-card-img" />
+            <span class="project-tag">RPA</span>
+            <h3>RPA Application</h3>
+            <p>流程自动化应用</p>
+          </a>
+          <a href="https://github.com/parachuteshe" target="_blank" rel="noopener" class="project-card glass">
+            <img src="images/3D Design.jpg" alt="DApps" class="project-card-img" />
+            <span class="project-tag">Web3</span>
+            <h3>DApps</h3>
+            <p>去中心化应用</p>
+          </a>
+        </div>
+      </div>
+    </section>
 
+    <section id="articles" class="section">
+      <div class="container">
+        <h2 class="section-title"><span class="mono">[05]</span> 内容与思考</h2>
+        <div class="articles-grid">
+          <a href="https://www.yuque.com/sherise/casehub" target="_blank" rel="noopener" class="article-card glass">
+            <h3>Case Hub</h3>
+            <p>咨询案例、案例研究与工作沉淀</p>
+          </a>
+          <a href="https://www.yuque.com/sherise/motionbank" target="_blank" rel="noopener" class="article-card glass">
+            <h3>Motion Bank</h3>
+            <p>BP 辩论、辩题与辩词分析</p>
+          </a>
+          <a href="https://www.yuque.com/sherise/tech-fad" target="_blank" rel="noopener" class="article-card glass">
+            <h3>Tech Fad</h3>
+            <p>新兴技术应用与趋势</p>
+          </a>
+          <a href="https://www.yuque.com/sherise/notes" target="_blank" rel="noopener" class="article-card glass">
+            <h3>Thoughts of Reading</h3>
+            <p>书影音笔记与思考</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="design" class="section section-dark">
+      <div class="container">
+        <h2 class="section-title"><span class="mono">[06]</span> 设计能力</h2>
+        <div class="design-tags">
+          <span class="design-tag glass">Product Design · Axure</span>
+          <span class="design-tag glass">UX · Figma / Sketch / XD</span>
+          <span class="design-tag glass">Web Design</span>
+          <span class="design-tag glass">Deck · PowerPoint</span>
+          <span class="design-tag glass">3D · C4D / Blender / Rhino</span>
+          <span class="design-tag glass">Graphic · PS / AI</span>
+          <span class="design-tag glass">Photography · Lightroom</span>
+          <span class="design-tag glass">Motion · AE</span>
+          <span class="design-tag glass">Interaction · Arduino / Processing</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <h2 class="section-title"><span class="mono">[07]</span> 联系</h2>
+        <p class="contact-lead">合作与交流，欢迎联系</p>
+        <div class="contact-links">
+          <a href="https://www.linkedin.com/in/sheriseshe/" target="_blank" rel="noopener" class="contact-link glass" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.behance.net/parashe" target="_blank" rel="noopener" class="contact-link glass" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+          <a href="http://mp.weixin.qq.com/mp/homepage?__biz=MzIxMjYwOTM1MA==&hid=2&sn=f12d7b7f796595bab0d87c2db59be86f&scene=18#wechat_redirect" target="_blank" rel="noopener" class="contact-link glass" aria-label="微信"><i class="fa-brands fa-weixin"></i></a>
+          <a href="https://github.com/parachuteshe" target="_blank" rel="noopener" class="contact-link glass" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.yuque.com/sherise" target="_blank" rel="noopener" class="contact-link glass" aria-label="语雀"><i class="fa-solid fa-dove"></i></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="mono">© 2025 磐序 Pash · Sherise She</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
