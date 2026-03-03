@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://parashe.site/sitemap.xml
