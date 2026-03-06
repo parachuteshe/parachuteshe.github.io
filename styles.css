@@ -95,6 +95,14 @@ body {
   transition: background 0.3s var(--ease), border-color 0.3s var(--ease);
 }
 
+/* 导航栏：透明灰色（与背景图层协调） */
+.nav.glass {
+  background: rgba(60, 62, 70, 0.45);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
 .nav-brand {
   display: flex;
   align-items: center;
@@ -185,6 +193,15 @@ body {
 .hero-bg {
   position: absolute;
   inset: 0;
+  pointer-events: none;
+}
+
+/* 背景图层之上的黑色透明遮罩 */
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
   pointer-events: none;
 }
 
