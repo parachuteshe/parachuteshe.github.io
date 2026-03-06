@@ -1,0 +1,9 @@
+# Netlify 部署配置 · parashe.site / parachuteshe.github.io
+[build]
+  publish = "."
+  command = ""
+
+# 自定义域名在 Netlify 后台绑定；根目录 CNAME 已含 parashe.site
+
+[build.environment]
+  NODE_VERSION = "18"
