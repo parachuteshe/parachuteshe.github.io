@@ -1,21 +1,21 @@
-/* ========== 磐序 PARASHE — 科技风变量 ========== */
+/* ========== 磐序 PARASHE — TapNow 风格 · 轻画布 ========== */
 :root {
-  --bg: #050508;
-  --bg-soft: #0a0e14;
-  --surface: rgba(255, 255, 255, 0.03);
-  --surface-hover: rgba(255, 255, 255, 0.06);
-  --border: rgba(255, 255, 255, 0.08);
-  --border-strong: rgba(255, 255, 255, 0.14);
-  --text: #e8eaed;
-  --text-muted: #9aa0a6;
-  --text-dim: #5f6368;
-  --primary: #00d4aa;
-  --primary-dim: #00a884;
-  --primary-glow: rgba(0, 212, 170, 0.35);
-  --accent: #00b4d8;
-  --accent-glow: rgba(0, 180, 216, 0.25);
+  --bg: #fafaf9;
+  --bg-soft: #f5f5f4;
+  --surface: rgba(0, 0, 0, 0.03);
+  --surface-hover: rgba(0, 0, 0, 0.06);
+  --border: rgba(0, 0, 0, 0.08);
+  --border-strong: rgba(0, 0, 0, 0.12);
+  --text: #1c1917;
+  --text-muted: #78716c;
+  --text-dim: #a8a29e;
+  --primary: #0d9488;
+  --primary-dim: #0f766e;
+  --primary-glow: rgba(13, 148, 136, 0.15);
+  --accent: #0284c7;
+  --accent-glow: rgba(2, 132, 199, 0.12);
   --purple: #7c3aed;
-  --purple-glow: rgba(124, 58, 237, 0.2);
+  --purple-glow: rgba(124, 58, 237, 0.1);
   --radius: 12px;
   --radius-sm: 8px;
   --font-sans: 'Noto Sans SC', -apple-system, sans-serif;
@@ -65,8 +65,8 @@ body {
   pointer-events: none;
   z-index: 0;
   background-image:
-    linear-gradient(rgba(0, 212, 170, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 212, 170, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
   background-size: 48px 48px;
   mask-image: radial-gradient(ellipse 100% 80% at 50% 0%, black 0%, transparent 60%);
   -webkit-mask-image: radial-gradient(ellipse 100% 80% at 50% 0%, black 0%, transparent 60%);
@@ -74,7 +74,7 @@ body {
 
 /* ========== 玻璃拟态 ========== */
 .glass {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--border);
@@ -95,12 +95,11 @@ body {
   transition: background 0.3s var(--ease), border-color 0.3s var(--ease);
 }
 
-/* 导航栏：透明灰色（与背景图层协调） */
 .nav.glass {
-  background: rgba(60, 62, 70, 0.45);
+  background: rgba(255, 255, 255, 0.72);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .nav-brand {
@@ -196,20 +195,20 @@ body {
   pointer-events: none;
 }
 
-/* 背景图层之上的黑色透明遮罩 */
+/* 背景图层之上的轻遮罩（轻画布风格） */
 .hero-bg::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.5);
   pointer-events: none;
 }
 
 .hero-bg .orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(90px);
-  opacity: 0.45;
+  filter: blur(100px);
+  opacity: 0.22;
   animation: orb-float 22s ease-in-out infinite;
 }
 
@@ -238,7 +237,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  opacity: 0.2;
+  opacity: 0.12;
   animation-delay: -14s;
 }
 
@@ -283,7 +282,6 @@ body {
 
 .title-en {
   color: var(--primary);
-  text-shadow: 0 0 40px var(--primary-glow);
 }
 
 .hero-tagline {
@@ -317,13 +315,13 @@ body {
 
 .btn-primary {
   background: var(--primary);
-  color: var(--bg);
+  color: #fff;
   border-color: var(--primary);
 }
 
 .btn-primary:hover {
   background: var(--primary-dim);
-  box-shadow: 0 0 30px var(--primary-glow);
+  box-shadow: 0 4px 14px var(--primary-glow);
   transform: translateY(-1px);
 }
 
@@ -355,7 +353,7 @@ body {
 .scroll-line {
   width: 1px;
   height: 32px;
-  background: linear-gradient(to bottom, var(--primary), transparent);
+  background: linear-gradient(to bottom, var(--text-dim), transparent);
   border-radius: 1px;
   animation: scroll-pulse 2s ease-in-out infinite;
 }
@@ -440,8 +438,8 @@ body {
 }
 
 .slash-card:hover {
-  border-color: rgba(0, 212, 170, 0.2);
-  box-shadow: 0 0 24px var(--primary-glow);
+  border-color: rgba(13, 148, 136, 0.2);
+  box-shadow: 0 4px 20px var(--primary-glow);
   transform: translateY(-2px);
 }
 
@@ -451,7 +449,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 212, 170, 0.12);
+  background: rgba(13, 148, 136, 0.1);
   color: var(--primary);
   border-radius: var(--radius-sm);
   margin-bottom: 1rem;
@@ -501,8 +499,8 @@ body {
 }
 
 .service-item:hover {
-  border-color: rgba(0, 212, 170, 0.25);
-  box-shadow: 0 0 28px var(--primary-glow);
+  border-color: rgba(13, 148, 136, 0.2);
+  box-shadow: 0 6px 24px var(--primary-glow);
   transform: translateY(-3px);
 }
 
@@ -546,8 +544,8 @@ body {
 }
 
 .project-card:hover {
-  border-color: rgba(0, 212, 170, 0.3);
-  box-shadow: 0 0 24px var(--primary-glow);
+  border-color: rgba(13, 148, 136, 0.25);
+  box-shadow: 0 6px 24px var(--primary-glow);
   transform: translateY(-2px);
 }
 
@@ -569,12 +567,12 @@ body {
 
 .project-link-demo {
   background: var(--primary);
-  color: var(--bg);
+  color: #fff;
 }
 
 .project-link-demo:hover {
   background: var(--primary-dim);
-  color: var(--bg);
+  color: #fff;
 }
 
 .project-link-gh {
@@ -648,8 +646,8 @@ body {
 }
 
 .article-card:hover {
-  border-color: rgba(0, 180, 216, 0.25);
-  box-shadow: 0 0 24px var(--accent-glow);
+  border-color: rgba(2, 132, 199, 0.2);
+  box-shadow: 0 6px 24px var(--accent-glow);
   transform: translateY(-2px);
 }
 
@@ -684,8 +682,8 @@ body {
 
 .design-tag:hover {
   color: var(--primary);
-  border-color: rgba(0, 212, 170, 0.3);
-  background: rgba(0, 212, 170, 0.06);
+  border-color: rgba(13, 148, 136, 0.25);
+  background: rgba(13, 148, 136, 0.06);
 }
 
 /* ========== Contact ========== */
@@ -719,8 +717,8 @@ body {
 
 .contact-link:hover {
   color: var(--primary);
-  border-color: rgba(0, 212, 170, 0.3);
-  box-shadow: 0 0 20px var(--primary-glow);
+  border-color: rgba(13, 148, 136, 0.25);
+  box-shadow: 0 4px 16px var(--primary-glow);
   transform: translateY(-2px);
 }
 
