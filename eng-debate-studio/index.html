@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="English Debate Studio - 辩题推荐、赛事、辩稿分享、1v1与BP赛制训练" />
+  <title>Eng Debate Studio | 英辩训练室</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <nav class="nav">
+    <a href="#/" class="nav-brand">Eng Debate Studio</a>
+    <button type="button" class="nav-toggle" aria-label="菜单"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="#/" data-page="home">首页</a></li>
+      <li><a href="#/motions" data-page="motions">辩题</a></li>
+      <li><a href="#/tournaments" data-page="tournaments">赛事</a></li>
+      <li><a href="#/speeches" data-page="speeches">辩稿</a></li>
+      <li><a href="#/training/1v1" data-page="training-1v1">1v1 训练</a></li>
+      <li><a href="#/training/bp" data-page="training-bp">BP 训练</a></li>
+      <li class="nav-user-wrap">
+        <a href="#/profile" data-page="profile" class="nav-avatar-link" id="nav-avatar-link">
+          <span class="nav-avatar" id="nav-avatar">
+            <svg class="nav-avatar-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          </span>
+        </a>
+        <div class="nav-avatar-dropdown hide" id="nav-avatar-dropdown">
+          <a href="#/profile" class="nav-dropdown-item">个人主页</a>
+          <button type="button" class="nav-dropdown-item nav-dropdown-logout" id="nav-logout-btn">退出登录</button>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <input type="file" id="nav-avatar-file" accept="image/*" class="hide" />
+
+  <main id="app">
+    <!-- Home -->
+    <section id="page-home" class="page">
+      <header class="hero">
+        <div class="hero-bg">
+          <img src="https://images.unsplash.com/photo-1541872703-74c0ee27668d?w=1200&q=80" alt="" class="hero-img" />
+          <span class="hero-overlay"></span>
+        </div>
+        <div class="hero-content">
+          <h1 class="hero-title">英国议会制辩论训练平台</h1>
+          <p class="hero-subtitle">与 AI 对手进行真实的 British Parliamentary 辩论训练，提升逻辑思维与口语表达</p>
+          <div class="hero-cta">
+            <a href="#/training/bp" class="btn btn-primary">开始辩论训练</a>
+            <a href="#" class="btn btn-ghost hero-btn-light" data-scroll-to="training-bp-section">了解赛制</a>
+          </div>
+        </div>
+      </header>
+
+      <section class="home-section" id="training-bp-section">
+        <h2 class="section-title">British Parliamentary 赛制</h2>
+        <p class="section-desc">世界大学生辩论赛制，8 人分 4 队，上下院各 2 队，考验逻辑、表达与团队协作</p>
+        <div class="bp-layout">
+          <div class="bp-half">
+            <h3>上院 (Opening Half)</h3>
+            <div class="bp-teams">
+              <div class="bp-team card">
+                <strong>Opening Government</strong>
+                <span>首相 + 副首相</span>
+              </div>
+              <div class="bp-team card">
+                <strong>Opening Opposition</strong>
+                <span>反对党领袖 + 副反对党领袖</span>
+              </div>
+            </div>
+          </div>
+          <div class="bp-half">
+            <h3>下院 (Closing Half)</h3>
+            <div class="bp-teams">
+              <div class="bp-team card">
+                <strong>Closing Government</strong>
+                <span>政府议员 + 政府党鞭</span>
+              </div>
+              <div class="bp-team card">
+                <strong>Closing Opposition</strong>
+                <span>反对党议员 + 反对党党鞭</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section-cta">
+          <a href="#/training/bp" class="btn btn-primary">进入 BP 训练</a>
+        </div>
+      </section>
+
+      <section class="home-section home-features">
+        <h2 class="section-title">平台特色</h2>
+        <p class="section-desc">专业级辩论训练体验</p>
+        <div class="feature-grid">
+          <div class="feature-card card">
+            <span class="feature-icon">🤖</span>
+            <h3>智能 AI 对手</h3>
+            <p>每个 AI 角色都有独特的辩论风格和策略，模拟真实对手的思维方式</p>
+          </div>
+          <div class="feature-card card">
+            <span class="feature-icon">⏱️</span>
+            <h3>实时计时系统</h3>
+            <p>精确的 15 分钟准备时间和 7 分钟发言计时，完全符合 BP 赛制要求</p>
+          </div>
+          <div class="feature-card card">
+            <span class="feature-icon">📊</span>
+            <h3>数据分析</h3>
+            <p>详细的表现分析和改进建议，帮助您系统性地提升辩论技能</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-section home-module" id="home-module-motions">
+        <div class="home-module-header">
+          <h2 class="section-title">辩题</h2>
+          <p class="section-desc">按年份、地区筛选，支持搜索</p>
+          <a href="#/motions" class="home-module-more">查看全部 →</a>
+        </div>
+        <div class="home-module-preview" id="home-motions-preview"></div>
+      </section>
+
+      <section class="home-section home-module" id="home-module-tournaments">
+        <div class="home-module-header">
+          <h2 class="section-title">赛事</h2>
+          <p class="section-desc">进行中与即将举办的辩论赛事</p>
+          <a href="#/tournaments" class="home-module-more">查看全部 →</a>
+        </div>
+        <div class="home-module-preview" id="home-tournaments-preview"></div>
+      </section>
+
+      <section class="home-section home-module" id="home-module-speeches">
+        <div class="home-module-header">
+          <h2 class="section-title">辩稿</h2>
+          <p class="section-desc">优秀辩稿与口语稿，支持收藏</p>
+          <a href="#/speeches" class="home-module-more">查看全部 →</a>
+        </div>
+        <div class="home-module-preview" id="home-speeches-preview"></div>
+      </section>
+
+      <section class="home-section home-module home-module-1v1" id="home-module-1v1">
+        <div class="home-module-header">
+          <h2 class="section-title">1v1 训练</h2>
+          <p class="section-desc">与 AI 一对一辩论，30 分钟限时，语音输入与 AI 裁决</p>
+          <a href="#/training/1v1" class="btn btn-primary">进入 1v1 训练</a>
+        </div>
+        <div class="home-module-preview">
+          <div class="home-1v1-card card">
+            <span class="feature-icon">🎤</span>
+            <p>抽签正/反方 → 选辩题 → 语音对打 → AI 从逻辑与严谨性裁决</p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- Register -->
+    <section id="page-register" class="page">
+      <h1>注册</h1>
+      <div class="card">
+        <form id="form-register">
+          <label>用户名</label>
+          <input type="text" id="register-username" placeholder="用于展示与登录" required minlength="2" />
+          <label>邮箱</label>
+          <input type="email" id="register-email" placeholder="选填，用于找回等" />
+          <label>密码</label>
+          <input type="password" id="register-password" placeholder="至少 6 位" required minlength="6" />
+          <label>确认密码</label>
+          <input type="password" id="register-password2" placeholder="再输入一次" required />
+          <button type="submit" class="btn btn-primary btn-block">注册</button>
+        </form>
+        <p class="text-muted mt-2 mb-0" style="font-size: 0.85rem;">已有账号？<a href="#/profile">去登录</a></p>
+      </div>
+    </section>
+
+    <!-- Profile -->
+    <section id="page-profile" class="page">
+      <h1>辩手主页</h1>
+      <div id="profile-guest" class="card">
+        <h2 class="card-title">登录</h2>
+        <form id="form-login">
+          <label>邮箱 / 用户名</label>
+          <input type="text" id="login-username" placeholder="请输入" required />
+          <label>密码</label>
+          <input type="password" id="login-password" placeholder="请输入" required />
+          <button type="submit" class="btn btn-primary btn-block">登录</button>
+        </form>
+        <p class="text-muted mt-2 mb-0" style="font-size: 0.85rem;">没有账号？<a href="#/register">去注册</a></p>
+      </div>
+      <div id="profile-content" class="hide">
+        <div class="profile-stats card">
+          <div class="profile-stat">
+            <span class="profile-stat-value" id="profile-stat-count">0</span>
+            <span class="profile-stat-label">参与辩论次数</span>
+          </div>
+          <div class="profile-stat">
+            <span class="profile-stat-value" id="profile-stat-rate">0%</span>
+            <span class="profile-stat-label">胜率</span>
+          </div>
+          <div class="profile-stat">
+            <span class="profile-stat-value" id="profile-stat-score">0</span>
+            <span class="profile-stat-label">平均得分</span>
+          </div>
+          <div class="profile-stat">
+            <span class="profile-stat-value profile-skill" id="profile-stat-skill">新手</span>
+            <span class="profile-stat-label">技能等级</span>
+          </div>
+        </div>
+        <div class="profile-header card">
+          <div class="profile-avatar-wrap">
+            <div class="profile-avatar" id="profile-avatar">
+              <svg class="profile-avatar-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            </div>
+            <input type="file" id="profile-avatar-file" accept="image/*" class="hide" />
+            <button type="button" class="btn btn-ghost btn-sm profile-avatar-edit" id="profile-edit-avatar">编辑头像</button>
+          </div>
+          <div>
+            <h2 id="profile-name">辩手</h2>
+            <p class="text-muted" id="profile-bio">辩论经验、徽章与好友</p>
+            <div class="profile-badges" id="profile-badges"></div>
+          </div>
+        </div>
+        <div class="card profile-block">
+          <h3>辩论经验</h3>
+          <div class="profile-block-view" id="profile-exp-view">
+            <p class="profile-static-text" id="profile-experience-text"></p>
+            <button type="button" class="btn btn-ghost" id="profile-edit-exp">编辑</button>
+          </div>
+          <div class="profile-block-edit hide" id="profile-exp-edit">
+            <textarea id="profile-experience" rows="4" placeholder="写下你的辩论经历、赛事与心得..."></textarea>
+            <button type="button" class="btn btn-primary" id="profile-save-exp">保存</button>
+          </div>
+        </div>
+        <div class="card profile-block">
+          <h3>证书 / 徽章</h3>
+          <div class="profile-block-view" id="profile-certs-view">
+            <div id="profile-certificates"></div>
+            <button type="button" class="btn btn-ghost" id="profile-edit-certs">编辑</button>
+          </div>
+          <div class="profile-block-edit hide" id="profile-certs-edit">
+            <div id="profile-certificates-edit"></div>
+            <input type="text" id="add-cert-name" placeholder="证书或徽章名称" style="margin-top:8px" />
+            <div class="profile-edit-actions">
+              <button type="button" class="btn btn-ghost" id="profile-add-cert">添加</button>
+              <button type="button" class="btn btn-primary" id="profile-save-certs">完成</button>
+            </div>
+          </div>
+        </div>
+        <div class="card profile-block">
+          <h3>辩论好友</h3>
+          <div class="profile-block-view" id="profile-friends-view">
+            <div id="profile-friends"></div>
+            <button type="button" class="btn btn-ghost" id="profile-edit-friends">编辑</button>
+          </div>
+          <div class="profile-block-edit hide" id="profile-friends-edit">
+            <div id="profile-friends-edit"></div>
+            <input type="text" id="add-friend-name" placeholder="好友用户名或邮箱" style="margin-top:8px" />
+            <div class="profile-edit-actions">
+              <button type="button" class="btn btn-ghost" id="profile-add-friend">添加好友</button>
+              <button type="button" class="btn btn-primary" id="profile-save-friends">完成</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>收藏的辩稿</h3>
+          <div id="profile-favorites"></div>
+        </div>
+        <div class="card">
+          <button type="button" class="btn btn-ghost" id="profile-logout">退出登录</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Motions -->
+    <section id="page-motions" class="page">
+      <h1>辩题推荐</h1>
+      <p class="text-muted">按年份、地区筛选，支持搜索。参考 <a href="https://www.qatardebate.org/en/page/motions/motions-bank" target="_blank" rel="noopener">QatarDebate Motions Bank</a></p>
+      <div class="filters">
+        <select id="motion-year">
+          <option value="">全部年份</option>
+        </select>
+        <select id="motion-region">
+          <option value="">全部地区</option>
+        </select>
+        <input type="search" id="motion-search" placeholder="搜索辩题..." />
+        <button type="button" class="btn btn-primary" id="motion-apply">筛选</button>
+      </div>
+      <div id="motions-list"></div>
+    </section>
+
+    <!-- Tournaments -->
+    <section id="page-tournaments" class="page">
+      <h1>赛事推荐</h1>
+      <p class="text-muted">来自 Tabbycat、赛事官网等；含名称、地区、报名费与门槛。</p>
+      <div class="filters">
+        <input type="search" id="tournament-search" placeholder="搜索赛事..." />
+        <select id="tournament-region">
+          <option value="">全部地区</option>
+        </select>
+        <button type="button" class="btn btn-primary" id="tournament-apply">筛选</button>
+      </div>
+      <div id="tournaments-list"></div>
+    </section>
+
+    <!-- Speeches -->
+    <section id="page-speeches" class="page">
+      <h1>辩稿</h1>
+      <p class="text-muted">真实辩论全文稿，参考 <a href="https://debating404.com/category/debate-transcripts/" target="_blank" rel="noopener">Debating404 Debate Transcripts</a>；可收藏，也可添加自己的辩稿。</p>
+
+      <div class="speeches-section">
+        <h2 class="section-title">精选辩论稿</h2>
+        <p class="section-desc">WSDC / WUDC 等赛事完整辩稿，点击阅读全文跳转至来源站</p>
+        <div class="filters">
+          <input type="search" id="speech-search" placeholder="搜索辩题、赛事、队伍..." />
+          <button type="button" class="btn btn-primary" id="speech-search-btn">搜索</button>
+        </div>
+        <div id="speeches-featured"></div>
+      </div>
+
+      <div class="speeches-section">
+        <h2 class="section-title">添加我的辩稿</h2>
+        <p class="section-desc">上传或粘贴辩稿内容，收藏后可在个人主页查看</p>
+        <div class="card">
+          <label>标题</label>
+          <input type="text" id="speech-title" placeholder="辩稿标题" />
+          <label>来源 URL（如 YouTube）— 可粘贴链接备注</label>
+          <input type="url" id="speech-url" placeholder="https://..." />
+          <label>粘贴或上传文本</label>
+          <input type="file" id="speech-file" accept=".txt,text/plain" />
+          <textarea id="speech-text" rows="6" placeholder="粘贴全文或上传后内容..."></textarea>
+          <button type="button" class="btn btn-primary" id="speech-submit">提交</button>
+        </div>
+      </div>
+
+      <div class="speeches-section">
+        <h2 class="section-title">我的辩稿</h2>
+        <div id="speeches-list"></div>
+      </div>
+    </section>
+
+    <!-- 1v1 Training -->
+    <section id="page-training-1v1" class="page">
+      <h1>专场训练 · 1v1 AI 对打</h1>
+      <p class="text-muted">抽签正/反方，语音输入对打，30 分钟内结束，AI 从逻辑性、严谨性等维度判定胜负。</p>
+      <div id="training-1v1-setup" class="training-panel">
+        <h3>1. 抽签</h3>
+        <p class="text-muted">点击抽签决定你与 AI 的正/反方</p>
+        <button type="button" class="btn btn-primary" id="1v1-draw">抽签</button>
+        <div id="1v1-sides" class="mt-2 hide">
+          <p><strong>你：</strong><span id="1v1-your-side"></span></p>
+          <p><strong>AI：</strong><span id="1v1-ai-side"></span></p>
+        </div>
+      </div>
+      <div id="training-1v1-motion" class="training-panel hide">
+        <h3>2. 辩题</h3>
+        <p id="1v1-motion-text" class="mb-0"></p>
+        <button type="button" class="btn btn-ghost mt-1" id="1v1-new-motion">换一题</button>
+      </div>
+      <div id="training-1v1-debate" class="training-panel hide">
+        <h3>3. 对打（30 分钟限时）</h3>
+        <div class="timer" id="1v1-timer">30:00</div>
+        <div class="transcript-box" id="1v1-transcript"></div>
+        <button type="button" class="voice-btn" id="1v1-voice" title="长按/点击说话" aria-label="语音">🎤</button>
+        <p class="text-muted text-center">点击麦克风说话，内容将转为文字并发送给 AI 回应</p>
+        <button type="button" class="btn btn-primary btn-block mt-2" id="1v1-end">结束对打并请求 AI 裁决</button>
+      </div>
+      <div id="training-1v1-result" class="training-panel hide">
+        <h3>AI 裁决</h3>
+        <div id="1v1-verdict"></div>
+        <button type="button" class="btn btn-ghost" id="1v1-again">再来一局</button>
+      </div>
+    </section>
+
+    <!-- BP Training -->
+    <section id="page-training-bp" class="page">
+      <h1>赛制训练 · British Parliamentary</h1>
+      <p class="text-muted">先抽签 slot，公布辩题后 15 分钟准备；上下院共 8 人，AI 承担未抽中方的角色。支持 8 人邀请制真人同台。</p>
+      <div class="card bp-roles">
+        <strong>BP 角色</strong>
+        <ul>
+          <li>Opening Government: PM, DPM</li>
+          <li>Opening Opposition: LO, DLO</li>
+          <li>Closing Government: MG, GW</li>
+          <li>Closing Opposition: MO, OW</li>
+        </ul>
+      </div>
+      <div id="training-bp-mode" class="training-panel">
+        <h3>模式</h3>
+        <button type="button" class="btn btn-primary" id="bp-solo">单人（AI 扮演其余 7 人）</button>
+        <button type="button" class="btn btn-ghost" id="bp-invite">邀请 8 人（真人抽 slot）</button>
+      </div>
+      <div id="training-bp-draw" class="training-panel hide">
+        <h3>抽签 Slot</h3>
+        <p class="text-muted">你抽到的位置</p>
+        <div class="slot-grid" id="bp-slots"></div>
+        <button type="button" class="btn btn-primary" id="bp-draw-btn">抽签</button>
+        <div id="bp-your-slot" class="mt-2 hide"></div>
+      </div>
+      <div id="training-bp-prep" class="training-panel hide">
+        <h3>辩题与 15 分钟准备</h3>
+        <p id="bp-motion-text" class="mb-0"></p>
+        <div class="timer" id="bp-prep-timer">15:00</div>
+        <button type="button" class="btn btn-primary" id="bp-start-debate">开始辩论</button>
+      </div>
+      <div id="training-bp-debate" class="training-panel hide">
+        <h3>辩论进行中</h3>
+        <p id="bp-current-speaker" class="mb-0"></p>
+        <div class="transcript-box" id="bp-transcript"></div>
+        <button type="button" class="voice-btn" id="bp-voice" title="轮到你时点击发言">🎤</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/motions.js"></script>
+  <script src="js/tournaments.js"></script>
+  <script src="js/speeches.js"></script>
+  <script src="js/training-1v1.js"></script>
+  <script src="js/training-bp.js"></script>
+</body>
+</html>
