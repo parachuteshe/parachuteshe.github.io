@@ -35,7 +35,7 @@ html {
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  background: var(--bg);
+  background: #1a201c;
   color: var(--text);
   line-height: 1.5;
   min-height: 100vh;
@@ -44,14 +44,14 @@ body {
   position: relative;
 }
 
-/* 科技风背景：浅色网格 */
+/* 极弱网格（与议会背景协调） */
 body::before {
   content: '';
   position: fixed;
   inset: 0;
   background-image:
-    linear-gradient(rgba(14, 165, 233, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(14, 165, 233, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
   background-size: 24px 24px;
   pointer-events: none;
   z-index: 0;
@@ -70,9 +70,9 @@ body::before {
   right: 0;
   height: var(--nav-h);
   padding-top: var(--safe-top);
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(26, 32, 28, 0.92);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   z-index: 100;
   display: flex;
   align-items: center;
@@ -84,13 +84,13 @@ body::before {
 .nav-brand {
   font-weight: 700;
   font-size: 1.1rem;
-  color: var(--text);
+  color: #e8e4dc;
   text-decoration: none;
   letter-spacing: -0.02em;
 }
 
 .nav-brand:hover {
-  color: var(--accent);
+  color: #c4b896;
 }
 
 .nav-links {
@@ -134,7 +134,7 @@ body::before {
   display: none;
   background: none;
   border: none;
-  color: var(--text);
+  color: #e8e4dc;
   padding: 8px;
   cursor: pointer;
 }
@@ -197,7 +197,7 @@ body::before {
 }
 
 .nav-avatar-link:hover {
-  background: var(--accent-soft);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .nav-avatar {
@@ -207,8 +207,8 @@ body::before {
   min-height: 32px;
   flex-shrink: 0;
   border-radius: 50%;
-  background: var(--bg-elevated);
-  border: 2px solid var(--border);
+  background: rgba(255, 255, 255, 0.12);
+  border: 2px solid rgba(255, 255, 255, 0.2);
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -228,7 +228,7 @@ body::before {
   min-width: 20px;
   min-height: 20px;
   flex-shrink: 0;
-  color: var(--text-muted);
+  color: #e8e4dc;
 }
 
 .nav-avatar-dropdown {
@@ -301,52 +301,18 @@ body::before {
   min-height: 100%;
 }
 
-#page-home::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('../images/parliament-hall.png') center/cover no-repeat;
-  z-index: -1;
-}
-
-#page-home::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.15) 40%, rgba(0,0,0,0.35) 100%);
-  z-index: -1;
-  pointer-events: none;
-}
-
 .parliament-hero {
   position: relative;
-  border-radius: var(--radius);
-  overflow: hidden;
   margin: 0 -16px 24px;
   min-height: 72vh;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.parliament-bg {
-  position: absolute;
-  inset: 0;
-}
-
-.parliament-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.parliament-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.5) 100%);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .parliament-content {
@@ -372,11 +338,11 @@ body::before {
 }
 
 .parliament-seats {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 16px 20px;
-  max-width: 560px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 20px 24px;
+  max-width: 400px;
   margin: 0 auto;
 }
 
