@@ -19,17 +19,16 @@
     });
   });
 
-  var lastScroll = 0;
+  // 导航栏始终保持浅色玻璃拟态，不随滚动变黑
   window.addEventListener('scroll', function () {
-    var y = window.scrollY;
+    var y = window.scrollY || window.pageYOffset;
     if (y > 80) {
-      nav.style.background = 'rgba(5, 5, 8, 0.85)';
-      nav.style.borderBottom = '1px solid rgba(255,255,255,0.06)';
+      nav.style.background = 'rgba(255, 255, 255, 0.88)';
+      nav.style.borderBottom = '1px solid rgba(0, 0, 0, 0.08)';
     } else {
       nav.style.background = '';
       nav.style.borderBottom = '';
     }
-    lastScroll = y;
   }, { passive: true });
 
   var observerOptions = { root: null, rootMargin: '0px', threshold: 0.08 };
